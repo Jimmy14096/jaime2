@@ -9,7 +9,14 @@ function historial1(){
     	client.send(message);
 	//document.getElementById("sensor").innerHTML="led off";
 }
-
+function historial2(){	
+	//alert("led off");
+	console.log("Obteniendo historial 2 .....");
+	message = new Paho.MQTT.Message("historial1");
+    	message.destinationName = "jfjacome.fie@unach.edu.ec/historial";
+    	client.send(message);
+	//document.getElementById("sensor").innerHTML="led off";
+}
 
 
 
@@ -39,7 +46,7 @@ function historial1(){
     // Once a connection has been made, make a subscription and send a message.
     console.log("Conectado...");
 	
-    client.subscribe("jfjacome.fie@unach.edu.ec/led");
+    
     client.subscribe("jfjacome.fie@unach.edu.ec/historial");
     message = new Paho.MQTT.Message("hola desde la web");
     message.destinationName = "jfjacome.fie@unach.edu.ec/historial";
@@ -67,34 +74,16 @@ function historial1(){
 	  sms=message.payloadString;
 	  numero=sms.length;
 	  
-	  if (message.payloadString=="Sensor 1--- Activado                                         FECHA:                                      ") { 
-	  document.getElementById("historial1").innerHTML=message.payloadString;
-	  }
-	  if (message.payloadString=="Sensor 1--- Desactivado                                   FECHA:                                      ") { 
-	  document.getElementById("historial1").innerHTML=message.payloadString;
-	  }
-	  
-	  if (message.payloadString=="Sensor 2--- Activado                                        FECHA:                                      ") { 
-	  document.getElementById("historial2").innerHTML=message.payloadString;
-	  }
-	  if (message.payloadString=="Sensor 2--- Desactivado                                   FECHA:                                      ") { 
-	  document.getElementById("historial2").innerHTML=message.payloadString;
-	  }
-	  
-	  /*
 	    if(sms[7]=="1"){
 	   document.getElementById("historial1").innerHTML=sms;
+	   document.getElementById("historial3").innerHTML=sms;
 	  }
 	  
-	  if(sms[7]=="1"){
-	   document.getElementById("historial1").innerHTML=sms;
+	  if(sms[7]=="2"){
+	   document.getElementById("historial2").innerHTML=sms;
+           document.getElementById("historial3").innerHTML=sms;
 	  }
-	   if(sms[7]=="2"){
-	   document.getElementById("historial2").innerHTML=message.payloadString;
-	  }
-	   if(numero==6 || numero==7){
-	    document.getElementById("LED").innerHTML=message.payloadString;
-	   }*/
+	   
 		  
   }
   
