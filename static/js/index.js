@@ -81,7 +81,7 @@ function historial2(){
 	   document.getElementById("historial2").innerHTML=sms;
            
 	  }
-	   if(sms[1]=="-"){
+	   if(sms[0]=="h"){
 	  
            document.getElementById("historial3").innerHTML=sms;
 	  }
