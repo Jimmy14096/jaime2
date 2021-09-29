@@ -74,11 +74,15 @@ function historial2(){
 	  
 	    if(sms[7]=="1"){
 	   document.getElementById("historial1").innerHTML=sms;
-	   document.getElementById("historial3").innerHTML=sms;
+	 
 	  }
 	  
 	  if(sms[7]=="2"){
 	   document.getElementById("historial2").innerHTML=sms;
+           
+	  }
+	   if(sms[1]=="-"){
+	  
            document.getElementById("historial3").innerHTML=sms;
 	  }
 	   
