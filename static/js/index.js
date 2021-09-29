@@ -2,16 +2,14 @@
 var cnt=0;
 
 function historial1(){	
-	//alert("led off");
-	console.log("Obteniendo historial 2 .....");
+	console.log("Obteniendo estados del sensor.....");
 	message = new Paho.MQTT.Message("historial");
     	message.destinationName = "jfjacome.fie@unach.edu.ec/historial";
     	client.send(message);
 	//document.getElementById("sensor").innerHTML="led off";
 }
 function historial2(){	
-	//alert("led off");
-	console.log("Obteniendo historial 2 .....");
+	console.log("Obteniendo historial .....");
 	message = new Paho.MQTT.Message("historial1");
     	message.destinationName = "jfjacome.fie@unach.edu.ec/historial";
     	client.send(message);
