@@ -1,29 +1,7 @@
 //https://www.eclipse.org/paho/clients/js/
 var cnt=0;
-function historial1() {
-	//alert("led on");
-	//console.log("Obteniendo historial 1 .....");
-	console.log("Obteniendo CONTROL LED .....");
-	
-	if(cnt==0){
-	message = new Paho.MQTT.Message("ON");
-    	message.destinationName = "jfjacome.fie@unach.edu.ec/led";
-    	client.send(message);
-	cnt=cnt+1;
-	}
-	else if(cnt==1){
-	message = new Paho.MQTT.Message("OFF");
-    	message.destinationName = "jfjacome.fie@unach.edu.ec/led";
-    	client.send(message);
-	cnt=0;
-	}
-	
-	//document.getElementById("sensor").innerHTML="led on";
-	
-	
-  
-}
-function historial2(){	
+
+function historial1(){	
 	//alert("led off");
 	console.log("Obteniendo historial 2 .....");
 	message = new Paho.MQTT.Message("historial");
