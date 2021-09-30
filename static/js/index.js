@@ -81,14 +81,11 @@ function historial2(){
 	   document.getElementById("historial2").innerHTML=sms;
            
 	  }
-	   if(sms=="h-Sensor 2--- Activado                                         FECHA:                                      "){
+	   if(sms[1]=="-"){
 	  
            document.getElementById("historial3").innerHTML=sms;
 	  }
-	  if(sms=="h-Sensor 2--- Desactivado                                   FECHA:                                      "){
-	  
-           document.getElementById("historial3").innerHTML=sms;
-	  }
+	 
 	   
 		  
   }
